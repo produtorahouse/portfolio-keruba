@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keruba — Produção de vídeo em tempo real</title>
+<meta name="description" content="Produtor de vídeo especialista em cobertura de eventos em tempo real. Portfólio de trabalhos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-reel" aria-hidden="true">
+  <video class="bg-clip is-active" data-clip="0" muted loop playsinline preload="auto">
+    <source src="assets/reel-1.mp4" type="video/mp4">
+  </video>
+  <video class="bg-clip" data-clip="1" muted loop playsinline preload="auto">
+    <source src="assets/reel-2.mp4" type="video/mp4">
+  </video>
+  <video class="bg-clip" data-clip="2" muted loop playsinline preload="auto">
+    <source src="assets/reel-3.mp4" type="video/mp4">
+  </video>
+  <video class="bg-clip" data-clip="3" muted loop playsinline preload="auto">
+    <source src="assets/reel-4.mp4" type="video/mp4">
+  </video>
+  <div class="bg-overlay"></div>
+</div>
+
+<div class="rec-bar" aria-hidden="true">
+  <span class="rec-dot"></span>
+  <span class="rec-label">AO VIVO</span>
+  <span class="rec-tick" id="clock">00:00:00</span>
+</div>
+
+<header class="hero" data-bg="0">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="eyebrow">Cobertura em tempo real · Lages, SC</p>
+    <h1 class="hero-title">Quando o<br>momento não<br>espera, <span class="hero-accent">eu&nbsp;capturo.</span></h1>
+    <p class="hero-sub">Sou Keruba — produtor de vídeo e especialista em cobertura ao vivo de eventos. Transmissões, cultos, conferências e celebrações, gravados e dirigidos no exato instante em que acontecem.</p>
+    <a href="#portfolio" class="hero-cta">Ver portfólio<i class="ti ti-arrow-down"></i></a>
+  </div>
+</header>
+
+<section class="about" id="sobre" data-bg="1">
+  <div class="about-inner">
+    <div class="about-tag">
+      <span class="timecode">00:00 / quem eu sou</span>
+    </div>
+    <div class="about-layout">
+      <div class="about-photo">
+        <img src="assets/perfil.jpg" alt="Foto de Keruba, produtor de vídeo">
+      </div>
+      <div class="about-main">
+        <div class="about-text">
+          <p>Trabalho na linha de frente da produção audiovisual em tempo real — onde não existe "corta e refaz". Cada transmissão, cada culto, cada evento ao vivo é uma tomada única, e minha função é garantir que ela seja registrada com a qualidade de uma produção planejada com semanas de antecedência.</p>
+          <p>Atuo entre fotografia, edição e direção técnica, com experiência sólida em equipamentos de transmissão multi-câmera, color grading e narrativa em vídeo — do roteiro à entrega final.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num">100%</span><span class="stat-label">tempo real</span></div>
+          <div class="stat"><span class="stat-num">multi</span><span class="stat-label">câmera</span></div>
+          <div class="stat"><span class="stat-num">live</span><span class="stat-label">+ pós-produção</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio" data-bg="2">
+  <div class="portfolio-header">
+    <span class="timecode">01:00 / portfólio</span>
+    <h2>Trabalhos selecionados</h2>
+  </div>
+
+  <div class="reel-verticals">
+
+    <article class="reel-card reel-card--vertical">
+      <div class="reel-frame">
+        <iframe
+          src="https://www.youtube.com/embed/05FhdLPZnjY"
+          title="Título do vídeo vertical 1"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="reel-info">
+        <span class="reel-tag">Reels</span>
+        <h3>Nome do projeto vertical 1</h3>
+        <p>Breve descrição do contexto — evento, cliente, desafio técnico.</p>
+      </div>
+    </article>
+
+    <article class="reel-card reel-card--vertical">
+      <div class="reel-frame">
+        <iframe
+          src="https://www.youtube.com/embed/iDYVV0Aqg68"
+          title="Título do vídeo vertical 2"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="reel-info">
+        <span class="reel-tag">Reels</span>
+        <h3>Nome do projeto vertical 2</h3>
+        <p>Breve descrição do contexto — evento, cliente, desafio técnico.</p>
+      </div>
+    </article>
+
+    <article class="reel-card reel-card--vertical">
+      <div class="reel-frame">
+        <iframe
+          src="https://www.youtube.com/embed/d_MJ538nWu4"
+          title="Título do vídeo vertical 3"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="reel-info">
+        <span class="reel-tag">Reels</span>
+        <h3>Nome do projeto vertical 3</h3>
+        <p>Breve descrição do contexto — evento, cliente, desafio técnico.</p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="reel-grid">
+
+    <article class="reel-card reel-card--feature">
+      <div class="reel-frame">
+        <iframe
+          src="https://www.youtube.com/embed/_rGm9QrFVAA"
+          title="Vídeo Horizontal 1"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="reel-info">
+        <span class="reel-tag">Cobertura ao vivo</span>
+        <h3>Nome do projeto 1</h3>
+        <p>Breve descrição do contexto — evento, cliente, desafio técnico.</p>
+      </div>
+    </article>
+
+    <article class="reel-card">
+      <div class="reel-frame">
+        <iframe
+          src="https://www.youtube.com/embed/R9rc5_l1Ra4"
+          title="Vídeo Horizontal 2"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="reel-info">
+        <span class="reel-tag">Documentário</span>
+        <h3>Nome do projeto 3</h3>
+        <p>Breve descrição do contexto — evento, cliente, desafio técnico.</p>
+      </div>
+    </article>
+
+
+  </div>
+</section>
+
+<section class="contact" id="contato" data-bg="3">
+  <div class="contact-inner">
+    <span class="timecode">02:00 / próxima gravação</span>
+    <h2>Vamos cobrir o seu evento?</h2>
+    <p class="contact-sub">Disponível para transmissões, cultos, conferências e projetos audiovisuais sob demanda.</p>
+    <div class="contact-links">
+      <a href="mailto:produtorahousecontato@gmail.com" class="contact-link">
+        <i class="ti ti-mail"></i> produtorahousecontato@gmail.com
+      </a>
+      <a href="https://wa.me/5549999501869" class="contact-link" target="_blank" rel="noopener">
+        <i class="ti ti-brand-whatsapp"></i> WhatsApp
+      </a>
+      <a href="https://www.instagram.com/gustavovarel_/" class="contact-link" target="_blank" rel="noopener">
+        <i class="ti ti-brand-instagram"></i> Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <p>Keruba © <span id="year"></span> · Lages, Santa Catarina</p>
+</footer>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/@tabler/icons-webfont/3.31.0/tabler-icons.min.css">
+<script src="script.js"></script>
+</body>
+</html>
