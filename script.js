@@ -33,15 +33,39 @@ if (bgClips.length && bgSections.length && 'IntersectionObserver' in window) {
     });
   };
 
+  // Elementos [data-bg] podem estar aninhados (ex.: um <article> com data-bg="3"
+  // dentro da <section> do portfólio, que tem data-bg="2"). Quando a linha central
+  // cruza os dois ao mesmo tempo, guardamos todos os que estão ativos no momento e
+  // escolhemos o mais interno no DOM — ele que manda no fundo exibido.
+  const activeSections = new Set();
+
+  const pickActiveBg = () => {
+    let winner = null;
+    activeSections.forEach((el) => {
+      const hasActiveDescendant = [...activeSections].some(
+        (other) => other !== el && el.contains(other)
+      );
+      if (!hasActiveDescendant) winner = el;
+    });
+    if (winner) activateClip(winner.dataset.bg);
+  };
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          activateClip(entry.target.dataset.bg);
+          activeSections.add(entry.target);
+        } else {
+          activeSections.delete(entry.target);
         }
       });
+      pickActiveBg();
     },
-    { threshold: 0.5 } // troca quando ~metade da seção está visível
+    // Em vez de medir "% da seção visível" (falha em seções mais altas que a tela,
+    // como o Portfólio — a % de visibilidade nunca chega a 0.5), reduzimos a área de
+    // observação a uma linha no meio da tela: a seção que estiver cruzando essa
+    // linha central ativa seu vídeo, não importa a altura da seção.
+    { rootMargin: '-50% 0px -50% 0px', threshold: 0 }
   );
 
   bgSections.forEach((section) => observer.observe(section));
