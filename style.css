@@ -478,3 +478,20 @@ body {
   .about, .portfolio, .contact { padding: 64px 20px; }
   .about-stats { gap: 28px; }
 }
+
+
+/* Vídeo vertical girado para ficar deitado */
+.reel-frame.reel-frame--girado {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.reel-frame.reel-frame--girado iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 56.25%;
+  height: 177.78%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
